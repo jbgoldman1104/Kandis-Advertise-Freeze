@@ -1,0 +1,36 @@
+// Font-family setting
+$font-title: 'IBM Plex Mono', monospace;
+$font-base: 'Roboto', sans-serif;
+
+// Font-size setting
+$biggest-size: 6rem;
+$biggest-size-height: 7.75rem;
+
+$title-size: 2.25rem;
+$title-size-height: 2.875rem;
+
+$base-size: 1.5rem;
+$base-size-height: 2rem;
+
+$medium-size: 1.25rem;
+$medium-size-height: 1.625rem;
+
+$small-size: 0.875rem;
+$small-size-height: 1.125rem;
+
+// Colors
+$main-color: #CECECE;
+
+// Other settings
+$main-gradient: linear-gradient(270deg, rgba(255, 255, 255, 0) 1.48%, #FFFFFF 57.82%, rgba(255, 255, 255, 0) 98.94%);
+$main-border-radius: 5px;
+
+// Breakpoints
+$breakpoints: (
+        xxl-large: 1400px,
+        x-large: 1200px,
+        large: 992px,
+        medium: 768px,
+        small: 576px,
+        extra-small: 442px
+)

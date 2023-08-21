@@ -1,0 +1,20 @@
+@import "src/assets/styles/helpers/mixin";
+
+.socialIcons {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  @include respond-to(small) {
+    gap: 15px;
+  }
+
+  > li > a {
+    display: inline-block;
+    width: 55px;
+
+    @include respond-to(small) {
+      width: 45px;
+    }
+  }
+}

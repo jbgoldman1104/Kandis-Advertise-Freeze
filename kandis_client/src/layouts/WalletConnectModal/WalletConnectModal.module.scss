@@ -1,0 +1,54 @@
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixin";
+
+.walletModal {
+  background: #000000;
+  max-width: 420px;
+  width: 100%;
+  border: 1px solid var(--yellow);
+  border-radius: 10px;
+  padding: 25px 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include respond-to(medium) {
+    max-width: 320px;
+    padding: 15px 0;
+  }
+}
+
+.body {
+  max-width: 320px;
+  margin: 0 auto;
+
+  > h3 {
+    font-family: $font-base;
+    font-size: $base-size;
+    line-height: $base-size-height;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 15px;
+
+    @include respond-to(medium) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  @include respond-to(medium) {
+    max-width: 260px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include respond-to(medium) {
+    gap: 10px;
+  }
+}

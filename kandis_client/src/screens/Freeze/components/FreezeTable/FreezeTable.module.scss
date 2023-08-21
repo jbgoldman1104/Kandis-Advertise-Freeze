@@ -1,0 +1,48 @@
+@import "src/assets/styles/helpers/mixin";
+
+.type {
+  display: flex;
+  gap: 13px;
+  align-items: self-start;
+
+  @include respond-to(large) {
+    > span {
+      display: none;
+    }
+  }
+
+  @include respond-to(small) {
+    svg {
+      width: 18px;
+      height: 14px;
+    }
+  }
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @include respond-to(small) {
+    > i svg  {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+.buttonsGroup {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+
+  @include respond-to(large) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @include respond-to(small) {
+    gap: 5px;
+  }
+}

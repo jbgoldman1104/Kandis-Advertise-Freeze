@@ -1,0 +1,1 @@
+export { default as AdminReview } from './components/AdminReview/AdminReview'

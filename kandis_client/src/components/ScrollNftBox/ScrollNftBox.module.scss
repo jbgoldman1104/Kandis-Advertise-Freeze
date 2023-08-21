@@ -1,0 +1,51 @@
+@import "src/assets/styles/helpers/mixin";
+
+.nftScrollBox {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: auto;
+  padding: 25px 0;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background-color: #282828;
+    border-radius: 26px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #7e7e7e;
+    border-radius: 26px;
+  }
+
+  > .nftItem {
+    width: 100vw;
+    margin-right: 40px;
+
+    img {
+      @include respond-to(medium) {
+        @include fluidImage;
+      }
+    }
+
+    @include respond-to(medium) {
+      max-width: 200px;
+      margin: 0;
+    }
+
+    @include respond-to(small) {
+      max-width: 120px;
+    }
+  }
+
+  @include respond-to(medium) {
+    overflow-x: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  @include respond-to(small) {
+    gap: 15px;
+  }
+}

@@ -1,0 +1,1 @@
+export const walletRegex = /^terra1[0-9a-z]{38}$/;

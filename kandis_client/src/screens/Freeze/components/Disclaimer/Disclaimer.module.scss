@@ -1,0 +1,50 @@
+.container {
+  max-width: 512px;
+  margin: 0 auto;
+}
+
+.terms {
+  margin-bottom: 4rem;
+}
+
+.termsBox {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  &.noMargin {
+    margin: 0;
+  }
+
+  > h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  > p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.acceptedTerms {
+  max-width: 360px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.acceptedTermsBox {
+  display: flex;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  > p {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    color: #BFBFBF;
+
+    > a {
+      color: #fff;
+    }
+  }
+}

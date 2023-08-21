@@ -1,0 +1,19 @@
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixin";
+
+.faq {
+  padding: 50px 0 70px 0;
+  background: #060606;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: $main-gradient;
+
+  @include respond-to(small) {
+    padding: 20px 0 60px
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}

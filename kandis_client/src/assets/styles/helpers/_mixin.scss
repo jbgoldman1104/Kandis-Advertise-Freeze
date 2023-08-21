@@ -1,0 +1,42 @@
+@import "./variables";
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  }
+}
+
+@mixin fluidImage() {
+  max-width: 100%;
+  height: auto;
+}
+
+@mixin placeHolderSettings {
+  &::-webkit-input-placeholder { /* WebKit browsers */
+    @content;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    @content;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ */
+    @content;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+ */
+    @content;
+  }
+}
+
+@mixin customScrollBar {
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #282828;
+    border-radius: 26px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--yellow);
+    border-radius: 26px;
+  }
+}

@@ -1,0 +1,59 @@
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixin";
+
+.footer {
+  padding: 55px 0;
+
+  @include respond-to(small) {
+    padding: 20px 0 25px;
+  }
+}
+
+.footerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @include respond-to(large) {
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column-reverse;
+  }
+}
+
+.footerCol {
+  position: relative;
+}
+
+.footerRightsReserved {
+  font-size: $medium-size;
+  line-height: $medium-size-height;
+  font-weight: 300;
+  margin-bottom: 6px;
+
+  @include respond-to(small) {
+    font-size: $small-size;
+    line-height: $small-size-height;
+  }
+}
+
+.footerNav {
+  display: flex;
+
+  > li {
+    margin-right: 56px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    > a {
+      font-size: $medium-size;
+      line-height: $medium-size-height;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

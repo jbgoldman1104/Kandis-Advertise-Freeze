@@ -1,0 +1,1 @@
+export { default as WalletMenu } from './components/WalletMenu/WalletMenu'

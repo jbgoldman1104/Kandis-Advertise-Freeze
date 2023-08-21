@@ -1,0 +1,74 @@
+@import "src/assets/styles/helpers/mixin";
+@import "src/assets/styles/helpers/variables";
+
+.dropArea {
+  width: 100%;
+  min-height: 200px;
+  background: var(--light-black);
+  border: 2px dashed var(--yellow);
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px 0;
+  color: #fff;
+
+  h5 {
+    font-family: $font-base;
+    font-size: $medium-size;
+    line-height: $medium-size-height;
+    margin: 10px 0;
+
+    @include respond-to(medium) {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin: 5px 0;
+    }
+  }
+
+  p {
+    font-size: $small-size;
+    line-height: $small-size-height;
+  }
+
+  &.error {
+    border: 2px dashed var(--error);
+  }
+}
+
+.dropImage {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+
+  img {
+    @include fluidImage
+  }
+}
+
+.aboutDropImage {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  flex-wrap: wrap;
+
+  > span {
+    color: var(--light-gray);
+    font-size: 0.75rem;
+  }
+
+  //@include respond-to()
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  color: var(--error);
+  font-weight: 600;
+  font-size: $small-size;
+  line-height: $small-size-height;
+}
+
+
+

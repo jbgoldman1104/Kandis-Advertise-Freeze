@@ -1,0 +1,44 @@
+@import "../helpers/variables";
+@import "../helpers/mixin";
+
+body {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
+  font-weight: var(--body-font-weight);
+  color: var(--body-color);
+  background: var(--wrapper-background);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  @include customScrollBar;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+}
+
+h1 {
+  font-size: $title-size;
+  line-height: $title-size-height;
+  font-weight: 600;
+
+  @include respond-to(medium) {
+    font-size: $base-size;
+    line-height: $base-size-height;
+  }
+}
+
+p {
+  font-size: $base-size;
+  line-height: $base-size-height;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+}
+
+.lock {
+  overflow: hidden;
+}

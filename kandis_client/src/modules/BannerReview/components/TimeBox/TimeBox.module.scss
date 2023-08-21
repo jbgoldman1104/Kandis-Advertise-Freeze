@@ -1,0 +1,22 @@
+@import "src/assets/styles/helpers/variables";
+
+.timeBox {
+  display: inline-block;
+}
+
+.timeLeft {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.timeLive {
+  border: 1px solid var(--yellow);
+  border-radius: 8px;
+  color: var(--yellow);
+  padding: 3px;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}

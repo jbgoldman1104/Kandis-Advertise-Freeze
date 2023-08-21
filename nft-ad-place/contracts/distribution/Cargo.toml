@@ -1,0 +1,27 @@
+[package]
+name = "distribution"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[features]
+library = []
+mt = ["sylvia/mt"]
+
+[dependencies]
+cosmwasm-schema = "1.2.2"
+cosmwasm-std = "1.2.2"
+cw-storage-plus = "1.0.1"
+cw-utils = "1.0.1"
+cw2 = "1.0.1"
+cw721 = "0.16.0"
+serde = "1.0.154"
+sylvia = "0.3.1"
+thiserror = "1.0.39"
+
+[dev-dependencies]
+sylvia = { version = "0.3.1", features = ["mt"] }
+anyhow = "1.0.69"
+cw-multi-test = "0.16.2"

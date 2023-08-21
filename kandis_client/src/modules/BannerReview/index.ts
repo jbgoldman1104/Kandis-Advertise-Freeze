@@ -1,0 +1,1 @@
+export { default as BannerReview } from './components/BannerReview/BannerReview'

@@ -1,0 +1,15 @@
+@import "src/assets/styles/helpers/mixin";
+
+.nftBox {
+  margin-top: 45px;
+  padding: 17px 21px 14px;
+  background: #121212;
+
+  @include respond-to(medium) {
+    padding: 14px
+  }
+
+  @include respond-to(small) {
+    margin-top: 14px;
+  }
+}

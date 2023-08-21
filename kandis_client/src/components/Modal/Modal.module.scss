@@ -1,0 +1,52 @@
+@import "src/assets/styles/helpers/mixin";
+@import "src/assets/styles/helpers/variables";
+
+
+.modal {
+  background: #000;
+  width: 630px;
+  margin: 0 auto;
+  position: relative;
+
+
+  @include respond-to(medium) {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+}
+
+.header {
+  padding: 19px 0;
+  border-radius: 10px 10px 0 0;
+  background: var(--yellow);
+
+  > p {
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+
+    @include respond-to(medium) {
+      font-size: $medium-size;
+      line-height: $medium-size-height;
+    }
+  }
+
+  @include respond-to(medium) {
+    border-radius: 0;
+    padding: 14px 0;
+  }
+}
+
+.body {
+  padding: 50px 0 40px;
+  border: 1px solid #FFFFFF;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+
+  @include respond-to(medium) {
+    border: none;
+    border-radius: 0;
+    padding: 20px 37px;
+  }
+}

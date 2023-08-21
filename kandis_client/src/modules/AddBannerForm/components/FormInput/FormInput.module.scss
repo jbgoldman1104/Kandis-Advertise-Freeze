@@ -1,0 +1,40 @@
+@import "src/assets/styles/helpers/mixin";
+@import "src/assets/styles/helpers/variables";
+
+.label {
+  position: relative;
+
+  > .icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+}
+
+.input {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--yellow);
+  background: var(--light-black);
+  padding: 10px 40px;
+  outline: none;
+  font-family: $font-base;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--light-gray);
+
+  @include placeHolderSettings {
+    color: var(--light-gray);
+  }
+}
+
+.errorMessage {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: start;
+  color: var(--error);
+  font-weight: 600;
+  gap: 9px;
+  padding-left: 5px;
+}

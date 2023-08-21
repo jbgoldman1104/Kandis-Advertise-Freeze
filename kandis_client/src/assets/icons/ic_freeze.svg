@@ -1,0 +1,7 @@
+<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9.5" cy="10" r="4" fill="#FAD64B"/>
+<path d="M9.5 6V4M9.5 1V4M9.5 4L6.5 2M9.5 4L12.5 2" stroke="#FAD64B" stroke-width="2" stroke-linecap="round"/>
+<path d="M13 9.5L15 9.5M18 9.5L15 9.5M15 9.5L17 6.5M15 9.5L17 12.5" stroke="#FAD64B" stroke-width="2" stroke-linecap="round"/>
+<path d="M9.5 13V15M9.5 18V15M9.5 15L6.5 17M9.5 15L12.5 17" stroke="#FAD64B" stroke-width="2" stroke-linecap="round"/>
+<path d="M6 9.5L4 9.5M1 9.5L4 9.5M4 9.5L2 6.5M4 9.5L2 12.5" stroke="#FAD64B" stroke-width="2" stroke-linecap="round"/>
+</svg>

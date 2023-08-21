@@ -1,0 +1,469 @@
+@import "src/assets/styles/helpers/variables";
+@import "src/assets/styles/helpers/mixin";
+
+.roadMap {
+  padding: 60px 0 100px 0;
+
+  @include respond-to(medium) {
+    padding: 30px 0;
+  }
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.roadMapContainer {
+  position: relative;
+}
+
+.roadMapRoot {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.roadMapItem {
+  position: relative;
+  max-width: 270px;
+  margin: 0 auto;
+
+  .content {
+    position: relative;
+    max-width: 165px;
+    margin: 0 auto;
+
+    > img {
+      margin-bottom: 10px;
+    }
+
+    > h3 {
+      font-size: 2rem;
+      line-height: 2.6rem;
+      font-weight: 600;
+      color: var(--yellow);
+      text-shadow: 0 0 5.3617px rgba(250, 214, 75, 0.5);
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 154px;
+      text-transform: uppercase;
+    }
+  }
+
+  > h4 {
+    font-size: $medium-size;
+    line-height: $medium-size-height;
+    text-shadow: 0 0 5.3617px rgba(255, 255, 255, 0.5);
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  > ul {
+    > li {
+      font-size: $small-size;
+      line-height: $small-size-height;
+      color: #FFFFFF;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 6px;
+        left: -10px;
+      }
+    }
+  }
+
+  &.gray {
+    .content {
+      > h3 {
+        color: #CECECE;
+        text-shadow: 0 0 9px #8E8E8D;
+      }
+    }
+  }
+
+  &.dec_20 {
+    margin-bottom: 160px;
+  }
+
+  &.q_1 {
+    max-width: 100%;
+    position: absolute;
+    top: 395px;
+    left: 120px;
+
+    .content {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 230px;
+      height: 40px;
+      background: url("../../../../../public/roadMap/qRightLine.svg") no-repeat;
+      position: absolute;
+      right: -180px;
+      top: 40px;
+    }
+  }
+
+  &.q_2 {
+    max-width: 100%;
+    position: absolute;
+    top: 555px;
+    right: 10px;
+
+    .content {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 230px;
+      height: 40px;
+      background: url("../../../../../public/roadMap/qLeftLine.svg") no-repeat;
+      position: absolute;
+      left: -262px;
+      top: 40px;
+    }
+  }
+
+  &.q_3 {
+    max-width: 100%;
+    position: absolute;
+    top: 700px;
+    left: 120px;
+
+    .content {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 229px;
+      height: 40px;
+      background: url("../../../../../public/roadMap/qRightGrayLine.svg") no-repeat;
+      position: absolute;
+      right: -137px;
+      top: 40px;
+    }
+  }
+
+  &.q_4 {
+    max-width: 100%;
+    position: absolute;
+    top: 835px;
+    right: 5px;
+
+    .content {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 230px;
+      height: 40px;
+      background: url("../../../../../public/roadMap/qLeftGrayLine.svg") no-repeat;
+      position: absolute;
+      left: -258px;
+      top: 40px;
+    }
+  }
+
+  &.q_24_1 {
+    max-width: 100%;
+    position: absolute;
+    bottom: -130px;
+    left: 117px;
+
+    .content {
+      margin: 0;
+    }
+
+    &::before {
+      content: '';
+      width: 230px;
+      height: 40px;
+      background: url("../../../../../public/roadMap/qRightGrayLine.svg") no-repeat;
+      position: absolute;
+      right: -228px;
+      top: 40px;
+    }
+  }
+}
+
+.roadMapYear {
+  $yellow-filter: drop-shadow(0px 0px 9px rgba(250, 214, 75, 0.5)) no-repeat;
+  $gray-filter: drop-shadow(0px 0px 9px #8E8E8D);
+
+  width: 158px;
+  height: 76px;
+  padding: 15px 35px;
+  border: 4px solid;
+  margin: 0 auto;
+  border-radius: $main-border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $title-size;
+  line-height: $title-size-height;
+  font-weight: 600;
+  position: relative;
+
+  &.yellow {
+    border-color: var(--yellow);
+    filter: $yellow-filter;
+    margin-bottom: 700px;
+    color: var(--yellow);
+
+    &::before {
+      content: '';
+      width: 44px;
+      height: 145px;
+      background: url("../../../../../public/roadMap/yearLine.svg") no-repeat;
+      position: absolute;
+      top: -145px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: "";
+      width: 26px;
+      height: 425px;
+      background: url("../../../../../public/roadMap/yearLineNotMarker.svg") no-repeat;
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.gray {
+    border-color: #8E8E8D;
+    filter: $gray-filter;
+    color: #CECECE;
+    text-shadow: 0 0 9px #8E8E8D;
+    margin-bottom: 130px;
+
+    &::before {
+      content: '';
+      width: 26px;
+      height: 300px;
+      background: url("../../../../../public/roadMap/yearLineGray.svg") no-repeat;
+      position: absolute;
+      top: -300px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: '';
+      width: 44px;
+      height: 170px;
+      background: url("../../../../../public/roadMap/grayLineMarker.svg") no-repeat;
+      position: absolute;
+      bottom: -162px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.roadMapMobileItem {
+  margin: 0 auto;
+  max-width: 18rem;
+  position: relative;
+  text-align: center;
+
+  > .content {
+    margin-bottom: 10px;
+
+    img {
+      @include respond-to(medium) {
+        width: 150px;
+      }
+    }
+
+    > h3 {
+      font-size: 2rem;
+      line-height: 2.6rem;
+      font-weight: 600;
+      color: var(--yellow);
+      text-shadow: 0 0 5.3617px rgba(250, 214, 75, 0.5);
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 154px;
+      text-transform: uppercase;
+
+      @include respond-to(medium) {
+        font-size: $base-size;
+        line-height: $base-size-height;
+      }
+    }
+  }
+
+  &.gray {
+    .content {
+      > h3 {
+        color: #CECECE;
+        text-shadow: 0 0 9px #8E8E8D;
+      }
+    }
+  }
+
+  > h4 {
+    font-size: $medium-size;
+    line-height: $medium-size-height;
+    text-shadow: 0 0 5.3617px rgba(255, 255, 255, 0.5);
+    color: #fff;
+    text-transform: uppercase;
+
+    @include respond-to(medium) {
+      font-size: $small-size;
+      line-height: $small-size-height;
+    }
+  }
+
+  > ul {
+    > li {
+      text-align: start;
+      font-size: $small-size;
+      line-height: $small-size-height;
+      color: #FFFFFF;
+      position: relative;
+
+
+      &::before {
+        content: '';
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 6px;
+        left: -10px;
+      }
+    }
+  }
+
+  &.dec_20 {
+    margin-bottom: 130px;
+  }
+
+  &.q_1 {
+    margin-bottom: 130px;
+  }
+
+  &.q_2 {
+    margin-bottom: 130px;
+
+    &::after {
+      content: "";
+      width: 26px;
+      height: 110px;
+      background: url('../../../../../public/roadMap/yearLineNotMarker.svg') no-repeat;
+      position: absolute;
+      top: -110px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.q_3 {
+    margin-bottom: 130px;
+
+    &::after {
+      content: "";
+      width: 26px;
+      height: 110px;
+      background: url('../../../../../public/roadMap/yearLineGray.svg') no-repeat;
+      position: absolute;
+      top: -110px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.q_4 {
+    &::after {
+      content: "";
+      width: 26px;
+      height: 110px;
+      background: url('../../../../../public/roadMap/yearLineGray.svg') no-repeat;
+      position: absolute;
+      top: -110px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.roadMapMobileYear {
+  $yellow-filter: drop-shadow(0px 0px 9px rgba(250, 214, 75, 0.5)) no-repeat;
+  $gray-filter: drop-shadow(0px 0px 9px #8E8E8D);
+
+  width: 158px;
+  height: 76px;
+  padding: 15px 35px;
+  border: 4px solid;
+  margin: 0 auto;
+  border-radius: $main-border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $title-size;
+  line-height: $title-size-height;
+  font-weight: 600;
+  position: relative;
+
+  @include respond-to(medium) {
+    height: 50px;
+    width: 100px;
+    padding: 10px 15px;
+    font-size: $base-size;
+    line-height: $base-size-height;
+  }
+
+  &.yellow {
+    border-color: var(--yellow);
+    filter: $yellow-filter;
+    color: var(--yellow);
+    margin-bottom: 100px;
+
+    &::before {
+      content: '';
+      width: 44px;
+      height: 100px;
+      background: url("../../../../../public/roadMap/yearLine.svg") no-repeat;
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      content: "";
+      width: 26px;
+      height: 110px;
+      background: url('../../../../../public/roadMap/yearLineNotMarker.svg') no-repeat;
+      position: absolute;
+      top:62px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include respond-to(medium) {
+        top: 36px;
+      }
+    }
+  }
+}

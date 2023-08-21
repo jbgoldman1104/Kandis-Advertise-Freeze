@@ -1,0 +1,43 @@
+.adminList {
+  width: 100%;
+  margin-bottom: 130px;
+}
+
+.adminItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 13px 14px;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.info {
+  display: flex;
+  gap: 8px;
+
+  > span {
+    color: var(--light-gray);
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  > p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.button {
+  cursor: pointer;
+}

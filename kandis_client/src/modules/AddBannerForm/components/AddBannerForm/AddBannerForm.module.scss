@@ -1,0 +1,86 @@
+@import "src/assets/styles/helpers/mixin";
+@import "src/assets/styles/helpers/variables";
+
+.scrollable {
+  position: absolute;
+  overflow-y: scroll;
+  max-height: 90%
+}
+
+.addBannerForm {
+  background: #000;
+  max-width: 630px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+
+  @include respond-to(medium) {
+    position: relative;
+    max-width: 100%;
+    height: 100vh;
+  }
+}
+
+.header {
+  padding: 19px 0;
+  border-radius: 10px 10px 0 0;
+  background: var(--yellow);
+
+  > p {
+    color: #000;
+    text-align: center;
+    font-weight: 600;
+
+    @include respond-to(medium) {
+      font-size: $medium-size;
+      line-height: $medium-size-height;
+    }
+  }
+
+  @include respond-to(medium) {
+    border-radius: 0;
+    padding: 14px 0;
+  }
+}
+
+.body {
+  padding: 34px 60px;
+  border: 1px solid #FFFFFF;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+
+  @include respond-to(medium) {
+    border: none;
+    border-radius: 0;
+    padding: 20px 37px;
+  }
+}
+
+.label_30 {
+  margin-top: 30px;
+}
+
+.selectHours {
+  margin-top: 55px;
+
+  > p {
+    font-size: 1.125rem;
+    line-height: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.bannerPreview {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+
+  img {
+    @include fluidImage
+  }
+}
