@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import styles from './Image.module.scss'
 import classNames from 'classnames';
+import { REACT_APP_API_KEY } from '../../utils/consts';
 
 interface ImageProps {
 	src: string
@@ -11,7 +12,7 @@ interface ImageProps {
 }
 
 const Image: FC<ImageProps> = ({ src, alt, fluid, api, className, ...props }) => {
-	const API_KEY: string = `${process.env.REACT_APP_API_KEY}/api`
+	const API_KEY: string = `${REACT_APP_API_KEY}/api`
 
 	return (
 		<img

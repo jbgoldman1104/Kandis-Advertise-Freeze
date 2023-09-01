@@ -22,6 +22,7 @@ import { setStatusPaymentFailed, setStatusPaymentCompleted } from '../../../../c
 import StatusModal from '../StatusModal/StatusModal';
 import { resizeFile } from '../../utils/resizeFile';
 import KandisTransaction from '../../../../core/contract/KandisTransaction';
+import { REACT_APP_MAIN_CONTRACT } from '../../../../utils/consts';
 
 
 const AddBannerForm = () => {
@@ -56,7 +57,7 @@ const AddBannerForm = () => {
 
 		}
 	);
-	const mainContractAddress: string = process.env.REACT_APP_MAIN_CONTRACT as string;
+	const mainContractAddress: string = REACT_APP_MAIN_CONTRACT;
 	const kandisTransaction = new KandisTransaction(mainContractAddress);
 	const hoursPrice = getPrice(Number(watch('timeLive', 12)));
 	const bannerChecked = watch('bannerChecked', false) ? 50 : 0;
