@@ -17,7 +17,7 @@ const CORS_URL = `${process.env.CORS_URL}`;
 app.use('api/static', express.static('static'));
 app.use(
 	cors({
-		origin: CORS_URL //https://kandisprotocol.com
+		origin: '*' //https://kandisprotocol.com
 	})
 );
 app.use(express.json());
